@@ -1,904 +1,312 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>District Shahdol | Madhya Pradesh</title>
-
+ 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+/* DISTRICT INFORMATION SECTION */
+
+.district-info {
+    width:100%;
+    padding:60px 5%;
+    background:white;
 }
 
-body{
-    background:#ffffff;
-    color:#222;
+.info-container {
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap:35px;
 }
 
-/* TOP GOVERNMENT BAR */
+/* LEFT SIDE */
 
-.top-bar{
-    background:#f5f5f5;
-    border-bottom:1px solid #ccc;
-    padding:10px 5%;
-    display:flex;
-    justify-content:space-between;
+.left-info {
+    background:#fff0d2;
+    padding:55px 30px;
+    border-radius:0 0 15px 0;
+    display:grid;
+    grid-template-columns:1.3fr 0.9fr;
     align-items:center;
-    font-size:13px;
-}
-
-.top-bar span{
-    margin-right:15px;
-}
-
-/* HEADER */
-
-.header{
-    padding:20px 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
     gap:25px;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.about-district h2 {
+    color:#684500;
+    font-size:25px;
+    margin-bottom:18px;
 }
 
-.logo-circle{
-    width:75px;
-    height:75px;
-    border-radius:50%;
-    background:#08733c;
-    color:white;
-    border:5px solid #e9b32c;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-    font-weight:bold;
+.about-district p {
+    font-size:16px;
+    line-height:1.7;
+    color:#333;
+    text-align:justify;
 }
 
-.logo h2{
-    font-size:22px;
-}
-
-.logo p{
-    font-size:17px;
-    margin-bottom:5px;
-}
-
-.search-box{
-    display:flex;
-    border:2px solid #aaa;
-    border-bottom:4px solid #72500a;
-    width:350px;
-    height:45px;
-}
-
-.search-box input{
-    width:100%;
-    border:none;
-    outline:none;
-    padding:10px;
-    font-size:15px;
-}
-
-.search-box button{
-    border:none;
-    background:white;
-    padding:10px;
-    cursor:pointer;
-    font-size:18px;
-}
-
-.digital-india{
-    color:#db651c;
-    font-size:21px;
-    font-weight:bold;
-}
-
-/* NAVIGATION */
-
-nav{
-    background:#fff;
-    border-top:1px solid #ccc;
-    border-bottom:1px solid #ccc;
-    padding:0 5%;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-nav ul li a{
-    display:block;
+.about-btn {
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    border:1px solid #805900;
+    border-radius:25px;
     text-decoration:none;
-    color:#111;
-    padding:16px 15px;
+    color:#805900;
     font-size:14px;
-    font-weight:500;
 }
 
-nav ul li a:hover,
-nav ul li.active a{
+.about-btn:hover {
     background:#805900;
     color:white;
 }
 
-.menu-btn{
-    display:none;
-    font-size:28px;
-    border:none;
-    background:none;
-    cursor:pointer;
-}
+/* COLLECTOR CARD */
 
-/* HERO SLIDER */
-
-.hero{
-    position:relative;
-    height:450px;
-    overflow:hidden;
-    background:#333;
-}
-
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0.85;
-}
-
-.hero-content{
-    position:absolute;
-    bottom:0;
-    left:12%;
-    right:12%;
-    background:rgba(0,0,0,0.65);
-    color:white;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.hero-content h1{
-    font-size:28px;
-}
-
-.slider-buttons button{
-    padding:12px 17px;
-    border:none;
+.collector-card {
     background:white;
-    cursor:pointer;
-    font-size:20px;
-    margin:2px;
-}
-
-.slider-buttons button:hover{
-    background:#e6aa22;
-}
-
-/* LATEST NEWS */
-
-.news{
-    max-width:1100px;
-    margin:30px auto;
-    display:flex;
-    align-items:center;
-    background:#fff0d2;
-    min-height:55px;
-}
-
-.news-title{
-    background:#684500;
-    color:white;
-    padding:17px 30px;
-    font-size:20px;
-    font-weight:bold;
-}
-
-.news-text{
-    padding:15px;
-    flex:1;
-    font-size:15px;
-}
-
-/* QUICK LINKS */
-
-.quick-links{
-    max-width:1100px;
-    margin:50px auto;
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:20px;
-}
-
-.quick-card{
-    background:white;
-    min-height:130px;
-    box-shadow:0 2px 12px rgba(0,0,0,0.15);
-    border-radius:5px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    padding:30px 15px;
     text-align:center;
-    padding:20px;
-    transition:0.3s;
-    text-decoration:none;
-    color:#111;
-    border-bottom:5px solid #dba62b;
-}
-
-.quick-card:hover{
-    transform:translateY(-8px);
-    background:#fff9e9;
-}
-
-.quick-card .icon{
-    font-size:35px;
-    margin-bottom:12px;
-}
-
-.quick-card h3{
-    font-size:17px;
-}
-
-/* ABOUT SECTION */
-
-.about{
-    padding:60px 8%;
-    background:#f6f6f6;
-    display:flex;
-    align-items:center;
-    gap:35px;
-}
-
-.about-image{
-    flex:1;
-}
-
-.about-image img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
     border-radius:8px;
+    box-shadow:0 3px 20px rgba(0,0,0,0.10);
 }
 
-.about-content{
-    flex:1;
+.collector-card img {
+    width:155px;
+    height:110px;
+    object-fit:cover;
+    margin-bottom:15px;
 }
 
-.about-content h2{
-    color:#805900;
-    font-size:30px;
-    margin-bottom:20px;
+.collector-card h3 {
+    font-size:18px;
+    line-height:1.4;
+    color:#222;
 }
 
-.about-content p{
+.collector-card p {
+    margin-top:7px;
     font-size:16px;
-    line-height:1.8;
-    text-align:justify;
 }
 
-/* TOURISM SECTION */
-
-.tourism{
-    padding:50px 8%;
-    text-align:center;
+.collector-links {
+    margin-top:20px;
 }
 
-.tourism h2{
-    font-size:30px;
-    color:#805900;
-    margin-bottom:30px;
-}
-
-.tourism-cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.place-card{
-    background:white;
-    box-shadow:0 2px 12px #ddd;
-    border-radius:8px;
-    overflow:hidden;
-}
-
-.place-card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.place-card h3{
-    padding:18px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#282828;
-    color:white;
-    padding:40px 8%;
-}
-
-.footer-content{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-}
-
-footer h3{
-    color:#eab12c;
-    margin-bottom:18px;
-}
-
-footer p{
-    line-height:2;
-    font-size:14px;
-}
-
-footer a{
-    color:white;
+.collector-links a {
     text-decoration:none;
+    color:#805900;
+    font-size:13px;
+    margin:5px;
 }
 
-footer a:hover{
-    color:#eab12c;
-}
+/* RIGHT SIDE */
 
-.copyright{
-    text-align:center;
-    border-top:1px solid #666;
-    padding-top:20px;
-    margin-top:30px;
-}
-
-/* BACK TO TOP */
-
-.top-btn{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:50%;
-    background:#986900;
-    color:white;
+.right-info h2 {
+    color:#684500;
     font-size:23px;
-    cursor:pointer;
+    margin-bottom:16px;
 }
 
-/* MOBILE RESPONSIVE */
-
-@media(max-width:900px){
-
-    .header{
-        flex-wrap:wrap;
-    }
-
-    .quick-links{
-        grid-template-columns:repeat(2,1fr);
-        margin:30px 15px;
-    }
-
-    .tourism-cards{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .about{
-        flex-direction:column;
-    }
-
-    .search-box{
-        width:100%;
-    }
-
+.utility-box,
+.glance-box {
+    background:#eeeeee;
+    padding:28px 22px;
+    border-radius:12px;
+    margin-bottom:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
 }
 
-@media(max-width:600px){
+.utility-box div,
+.glance-box div {
+    font-size:15px;
+    line-height:1.5;
+}
 
-    .top-bar{
-        flex-direction:column;
-        gap:8px;
-    }
+.utility-box strong,
+.glance-box strong {
+    color:#111;
+}
 
-    .logo h2{
-        font-size:18px;
-    }
+/* BOTTOM GOLD STRIP */
 
-    .logo-circle{
-        width:55px;
-        height:55px;
-        font-size:20px;
-    }
+.bottom-strip {
+    height:80px;
+    background:#dfa936;
+    width:100%;
+}
 
-    .digital-india{
-        display:none;
-    }
+/* RESPONSIVE */
 
-    .menu-btn{
-        display:block;
-        margin:10px 0;
-    }
+@media(max-width:900px) {
 
-    nav ul{
-        display:none;
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    nav ul.show{
-        display:flex;
-    }
-
-    nav ul li a{
-        border-bottom:1px solid #eee;
-    }
-
-    .hero{
-        height:300px;
-    }
-
-    .hero-content{
-        left:0;
-        right:0;
-        padding:12px;
-    }
-
-    .hero-content h1{
-        font-size:19px;
-    }
-
-    .news{
-        margin:20px 10px;
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .news-title{
-        text-align:center;
-    }
-
-    .quick-links{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
-
-    .quick-card{
-        min-height:120px;
-    }
-
-    .tourism-cards{
+    .info-container {
         grid-template-columns:1fr;
     }
 
-    .footer-content{
+}
+
+@media(max-width:600px) {
+
+    .left-info {
         grid-template-columns:1fr;
+        padding:30px 20px;
+    }
+
+    .collector-card {
+        max-width:100%;
+    }
+
+    .utility-box,
+    .glance-box {
+        padding:20px 15px;
+        gap:15px;
+    }
+
+    .district-info {
+        padding:30px 15px;
     }
 
 }
 
 </style>
-</head>
 
-<body>
 
-<!-- GOVERNMENT TOP BAR -->
+<!-- DISTRICT INFORMATION SECTION -->
 
-<div class="top-bar">
-    <div>
-        <span>🇮🇳</span>
-        <span>मध्यप्रदेश शासन</span>
-        <span>Government of Madhya Pradesh</span>
-    </div>
+<section class="district-info">
 
-    <div>
-        <span>🔤</span>
-        <span>♿ Accessibility</span>
-    </div>
-</div>
+<div class="info-container">
 
-<!-- HEADER -->
 
-<header class="header">
+<!-- LEFT SECTION -->
 
-    <div class="logo">
+<div class="left-info">
 
-        <div class="logo-circle">श</div>
+    <div class="about-district">
 
-        <div>
-            <p>जिला शहडोल</p>
-            <h2>District Shahdol</h2>
-        </div>
+        <h2>ABOUT DISTRICT</h2>
 
-    </div>
+        <p>
+        Shahdol is named after the headquarters town
+        Shahdol which is located on the Bilaspur-Katni
+        Section of the South-Eastern Railways.
 
-    <div class="search-box">
-        <input type="text" id="searchInput"
-        placeholder="Search website...">
+        The etymology of the name as ascertained from
+        the local residents points to its derivation
+        from the name of the one Shahdolwa Ahir of
+        Sohagpur village.
+        </p>
 
-        <button onclick="searchWebsite()">🔍</button>
-    </div>
+        <a href="https://shahdol.nic.in/en/"
+        target="_blank" class="about-btn">
 
-    <div class="digital-india">
-        🇮🇳 Digital India
-    </div>
+            View More About District ❯
 
-</header>
-
-<!-- NAVIGATION -->
-
-<nav>
-
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-    <ul id="navMenu">
-
-        <li class="active"><a href="index.html">Home</a></li>
-
-        <li><a href="#about">About District</a></li>
-
-        <li><a href="#directory">Directory</a></li>
-
-        <li><a href="#contact">Contact</a></li>
-
-        <li><a href="#departments">Departments</a></li>
-
-        <li><a href="#tourism">Tourism</a></li>
-
-        <li><a href="#forms">Forms</a></li>
-
-        <li><a href="#documents">Documents</a></li>
-
-    </ul>
-
-</nav>
-
-<!-- HERO SLIDER -->
-
-<section class="hero">
-
-    <img id="heroImage"
-    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
-    alt="District Shahdol">
-
-    <div class="hero-content">
-
-        <h1 id="heroTitle">Welcome to District Shahdol</h1>
-
-        <div class="slider-buttons">
-
-            <button onclick="previousSlide()">❮</button>
-
-            <button onclick="nextSlide()">❯</button>
-
-        </div>
+        </a>
 
     </div>
 
-</section>
 
-<!-- LATEST NEWS -->
+    <!-- COLLECTOR PROFILE -->
 
-<section class="news">
-
-    <div class="news-title">
-        Latest News
-    </div>
-
-    <div class="news-text" id="newsText">
-        Welcome to the official-style District Shahdol website demo.
-    </div>
-
-</section>
-
-<!-- QUICK LINKS -->
-
-<section class="quick-links" id="directory">
-
-    <a href="#departments" class="quick-card">
-        <div class="icon">🏢</div>
-        <h3>E-Office</h3>
-    </a>
-
-    <a href="#contact" class="quick-card">
-        <div class="icon">📞</div>
-        <h3>Telephone Directory</h3>
-    </a>
-
-    <a href="#tourism" class="quick-card">
-        <div class="icon">🏞️</div>
-        <h3>Tourist Places</h3>
-    </a>
-
-    <a href="#departments" class="quick-card">
-        <div class="icon">👨‍💼</div>
-        <h3>District Administration</h3>
-    </a>
-
-    <a href="#documents" class="quick-card">
-        <div class="icon">📄</div>
-        <h3>Important Documents</h3>
-    </a>
-
-</section>
-
-<!-- ABOUT SHAHdol -->
-
-<section class="about" id="about">
-
-    <div class="about-image">
+    <div class="collector-card">
 
         <img
-        src="https://images.unsplash.com/photo-1518005020951-eccb494ad742"
-        alt="Shahdol District">
+        src="https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/2026/08/17860935247325.jpeg"
+        alt="Collector Shahdol">
+
+        <h3>
+        Collector and District Magistrate
+        </h3>
+
+        <p>Parth Jaiswal (I.A.S)</p>
+
+        <div class="collector-links">
+
+            <a href="https://shahdol.nic.in/en/dm-profile/parth-jaiswal/"
+            target="_blank">
+            Profile ❯
+            </a>
+
+            <a href="https://shahdol.nic.in/en/contact-directory/"
+            target="_blank">
+            Contact ❯
+            </a>
+
+        </div>
 
     </div>
 
-    <div class="about-content">
+</div>
 
-        <h2>About District Shahdol</h2>
 
-        <p>
-            Shahdol is an important district of Madhya Pradesh,
-            India. The district is known for its natural beauty,
-            forests, cultural heritage and historical importance.
+<!-- RIGHT SECTION -->
 
-            The District Administration works to provide
-            better facilities and government services to
-            citizens.
+<div class="right-info">
 
-            This website provides information about district
-            administration, departments, tourism, public services
-            and important documents.
-        </p>
 
+<!-- PUBLIC UTILITY -->
+
+<h2>PUBLIC UTILITY</h2>
+
+<div class="utility-box">
+
+    <div>
+        Banks<br>
+        <strong>13</strong>
     </div>
+
+    <div>
+        Colleges/Universities<br>
+        <strong>1</strong>
+    </div>
+
+    <div>
+        Electricity<br>
+        <strong>1</strong>
+    </div>
+
+    <div>
+        Hospitals<br>
+        <strong>1</strong>
+    </div>
+
+</div>
+
+
+<!-- DISTRICT AT A GLANCE -->
+
+<h2>DISTRICT AT A GLANCE</h2>
+
+<div class="glance-box">
+
+    <div>
+        Area: <strong>5,610 Sq. Km.</strong>
+    </div>
+
+    <div>
+        Population: <strong>10,66,063</strong>
+    </div>
+
+    <div>
+        Language:<br>
+        <strong>Hindi, Bagheli, Urdu</strong>
+    </div>
+
+    <div>
+        Villages:<br>
+        <strong>886</strong>
+    </div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- TOURISM -->
 
-<section class="tourism" id="tourism">
+<!-- GOLD BOTTOM DESIGN -->
 
-    <h2>Explore Shahdol</h2>
-
-    <div class="tourism-cards">
-
-        <div class="place-card">
-
-            <img
-            src="https://images.unsplash.com/photo-1511497584788-876760111969"
-            alt="Forest">
-
-            <h3>Natural Beauty</h3>
-
-        </div>
-
-        <div class="place-card">
-
-            <img
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-            alt="Nature">
-
-            <h3>Tourist Attractions</h3>
-
-        </div>
-
-        <div class="place-card">
-
-            <img
-            src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23"
-            alt="Heritage">
-
-            <h3>Culture and Heritage</h3>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer id="contact">
-
-    <div class="footer-content">
-
-        <div>
-            <h3>District Shahdol</h3>
-
-            <p>
-                District Shahdol<br>
-                Madhya Pradesh, India<br>
-                Welcome to Shahdol District Website
-            </p>
-        </div>
-
-        <div id="departments">
-            <h3>Important Links</h3>
-
-            <p>
-                <a href="#about">About District</a><br>
-                <a href="#tourism">Tourism</a><br>
-                <a href="#directory">Directory</a><br>
-                <a href="#documents">Documents</a>
-            </p>
-        </div>
-
-        <div>
-            <h3>Contact Information</h3>
-
-            <p>
-                District Collector Office<br>
-                Shahdol, Madhya Pradesh<br>
-                India
-            </p>
-        </div>
-
-    </div>
-
-    <div class="copyright">
-
-        <p>
-            © 2026 District Shahdol Website Demo.
-            All Rights Reserved.
-        </p>
-
-        <p>
-            This is an educational demo project,
-            not an official government website.
-        </p>
-
-    </div>
-
-</footer>
-
-<button class="top-btn" onclick="goToTop()">↑</button>
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-// MOBILE MENU
-
-function toggleMenu(){
-
-    document.getElementById("navMenu")
-    .classList.toggle("show");
-
-}
-
-// SLIDER
-
-let slides = [
-
-    {
-        title:"Welcome to District Shahdol",
-        image:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
-    },
-
-    {
-        title:"Explore the Natural Beauty of Shahdol",
-        image:"https://images.unsplash.com/photo-1511497584788-876760111969"
-    },
-
-    {
-        title:"Discover Culture and Heritage",
-        image:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-    }
-
-];
-
-let currentSlide = 0;
-
-function showSlide(){
-
-    document.getElementById("heroTitle").innerText =
-    slides[currentSlide].title;
-
-    document.getElementById("heroImage").src =
-    slides[currentSlide].image;
-
-}
-
-function nextSlide(){
-
-    currentSlide++;
-
-    if(currentSlide >= slides.length){
-        currentSlide = 0;
-    }
-
-    showSlide();
-
-}
-
-function previousSlide(){
-
-    currentSlide--;
-
-    if(currentSlide < 0){
-        currentSlide = slides.length - 1;
-    }
-
-    showSlide();
-
-}
-
-// AUTOMATIC SLIDER
-
-setInterval(nextSlide,5000);
-
-// SEARCH
-
-function searchWebsite(){
-
-    let value = document.getElementById("searchInput")
-    .value.toLowerCase().trim();
-
-    if(value === ""){
-        alert("Please enter something to search!");
-        return;
-    }
-
-    let sections = document.querySelectorAll(
-        ".about, .tourism, .quick-card, footer"
-    );
-
-    let found = false;
-
-    sections.forEach(function(section){
-
-        if(section.innerText.toLowerCase().includes(value)){
-
-            section.scrollIntoView({
-                behavior:"smooth"
-            });
-
-            found = true;
-
-        }
-
-    });
-
-    if(!found){
-        alert("No matching information found on this demo page.");
-    }
-
-}
-
-// BACK TO TOP
-
-function goToTop(){
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-</script>
-
-</body>
-</html>
+<div class="bottom-strip"></div>
