@@ -1,14 +1,18 @@
-
-
+ 
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>District Map - Shahdol</title>
+<title>District Map - Shahdol | Madhya Pradesh</title>
 
 <style>
+
+/* BASIC CSS */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +21,76 @@
 }
 
 body {
-    background: #fff;
+    background: #ffffff;
     color: #222;
 }
+
+/* HEADER */
+
+header {
+    background: #fff;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo h2 {
+    color: #684500;
+    font-size: 25px;
+}
+
+.logo p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.home-btn {
+    background: #805900;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-btn:hover {
+    background: #dfa936;
+    color: #222;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: white;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0 5%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    padding: 16px 18px;
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav ul li a:hover,
+nav ul li.active a {
+    background: #805900;
+    color: white;
+}
+
+/* MAP SECTION */
 
 .map-section {
     width: 100%;
@@ -47,6 +118,8 @@ body {
     line-height: 1.7;
 }
 
+/* GOOGLE MAP */
+
 .map-box {
     width: 100%;
     height: 550px;
@@ -61,6 +134,8 @@ body {
     height: 100%;
     border: 0;
 }
+
+/* MAP BUTTONS */
 
 .map-buttons {
     display: flex;
@@ -84,21 +159,64 @@ body {
     color: #222;
 }
 
+/* DISTRICT INFORMATION */
+
 .map-footer {
     margin-top: 30px;
     background: #fff0d2;
-    padding: 20px;
+    padding: 25px;
     border-left: 5px solid #dfa936;
-    line-height: 1.8;
+    line-height: 2;
+    border-radius: 5px;
 }
 
-.bottom-strip {
-    height: 75px;
-    background: #dfa936;
+.map-footer h3 {
+    color: #684500;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #4f3500;
+    color: white;
+    padding: 30px 5%;
+    text-align: center;
     margin-top: 35px;
 }
 
+footer h3 {
+    color: #eab12c;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* BOTTOM STRIP */
+
+.bottom-strip {
+    height: 12px;
+    background: #dfa936;
+    width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+
 @media(max-width:600px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
     .map-section {
         padding: 30px 15px;
     }
@@ -118,79 +236,202 @@ body {
     .map-buttons a {
         text-align: center;
     }
+
 }
+
 </style>
+
 </head>
 
 <body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+
+        <h2>जिला शहडोल</h2>
+
+        <p>District Shahdol, Madhya Pradesh</p>
+
+    </div>
+
+    <a href="index.html" class="home-btn">
+        ← Back to Home
+    </a>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">मुख्य पृष्ठ</a>
+        </li>
+
+        <li>
+            <a href="index.html#about">जिले के बारे में</a>
+        </li>
+
+        <li class="active">
+            <a href="map.html">जिले का मानचित्र</a>
+        </li>
+
+        <li>
+            <a href="index.html#tourism">पर्यटन</a>
+        </li>
+
+        <li>
+            <a href="index.html#contact">संपर्क करें</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- DISTRICT MAP SECTION -->
 
 <section class="map-section">
 
 <div class="map-container">
 
+
+    <!-- TITLE -->
+
     <h1 class="map-title">
+
         जिले का मानचित्र
+
     </h1>
 
+
+    <!-- DESCRIPTION -->
+
     <p class="map-description">
+
         जिला शहडोल, मध्य प्रदेश का भौगोलिक मानचित्र।
-        यहाँ आप शहडोल जिले और आसपास के क्षेत्रों को देख सकते हैं।
+        यहाँ आप शहडोल जिले और आसपास के क्षेत्रों
+        को देख सकते हैं।
+
     </p>
+
 
     <!-- GOOGLE DISTRICT MAP -->
 
     <div class="map-box">
 
         <iframe
-            src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sdistrict+shahdol!6i9"
+
+            src="https://maps.google.com/maps?q=Shahdol%20Madhya%20Pradesh&t=&z=9&ie=UTF8&iwloc=&output=embed"
+
             allowfullscreen
+
             loading="lazy"
+
             referrerpolicy="no-referrer-when-downgrade">
+
         </iframe>
 
     </div>
+
 
     <!-- MAP BUTTONS -->
 
     <div class="map-buttons">
 
-        <a href="https://www.google.com/maps/search/?api=1&query=Shahdol+District+Madhya+Pradesh"
-           target="_blank">
+
+        <a
+
+        href="https://www.google.com/maps/search/?api=1&query=Shahdol+District+Madhya+Pradesh"
+
+        target="_blank">
+
             Open in Google Maps ↗
+
         </a>
 
-        <a href="https://shahdol.nic.in/en/map-of-district/"
-           target="_blank">
+
+        <a
+
+        href="https://shahdol.nic.in/en/map-of-district/"
+
+        target="_blank">
+
             Official District Map ↗
+
         </a>
+
 
     </div>
 
-    <!-- INFORMATION -->
+
+    <!-- DISTRICT INFORMATION -->
 
     <div class="map-footer">
 
         <h3>District Shahdol</h3>
 
         <p>
-            State: Madhya Pradesh
+            <strong>State:</strong>
+            Madhya Pradesh
         </p>
 
         <p>
-            District Headquarters: Shahdol
+            <strong>District Headquarters:</strong>
+            Shahdol
         </p>
 
         <p>
-            Area: 5,610 Sq. Km.
+            <strong>Area:</strong>
+            5,610 Sq. Km.
+        </p>
+
+        <p>
+            <strong>Language:</strong>
+            Hindi, Bagheli, Urdu
         </p>
 
     </div>
+
 
 </div>
 
 </section>
 
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>District Shahdol</h3>
+
+    <p>
+        Madhya Pradesh, India
+    </p>
+
+    <p>
+        © 2026 District Shahdol Website.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Educational Project - Not an Official Government Website.
+    </p>
+
+</footer>
+
+
+<!-- BOTTOM DESIGN -->
+
 <div class="bottom-strip"></div>
 
+
 </body>
+
 </html>
