@@ -1,175 +1,214 @@
  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>District Shahdol | Madhya Pradesh</title>
+
 <style>
 
-/* DISTRICT INFORMATION SECTION */
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+    color: #222;
+}
+
+/* DISTRICT INFORMATION */
 
 .district-info {
-    width:100%;
-    padding:60px 5%;
-    background:white;
+    width: 100%;
+    padding: 60px 5%;
+    background: white;
 }
 
 .info-container {
-    max-width:1300px;
-    margin:auto;
-    display:grid;
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
     grid-template-columns: 1.2fr 1fr;
-    gap:35px;
+    gap: 35px;
 }
 
-/* LEFT SIDE */
+/* LEFT SECTION */
 
 .left-info {
-    background:#fff0d2;
-    padding:55px 30px;
-    border-radius:0 0 15px 0;
-    display:grid;
-    grid-template-columns:1.3fr 0.9fr;
-    align-items:center;
-    gap:25px;
+    background: #fff0d2;
+    padding: 55px 30px;
+    border-radius: 0 0 15px 0;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    align-items: center;
+    gap: 25px;
 }
 
 .about-district h2 {
-    color:#684500;
-    font-size:25px;
-    margin-bottom:18px;
+    color: #684500;
+    font-size: 25px;
+    margin-bottom: 18px;
 }
 
 .about-district p {
-    font-size:16px;
-    line-height:1.7;
-    color:#333;
-    text-align:justify;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
 }
 
 .about-btn {
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    border:1px solid #805900;
-    border-radius:25px;
-    text-decoration:none;
-    color:#805900;
-    font-size:14px;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 1px solid #805900;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #805900;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 .about-btn:hover {
-    background:#805900;
-    color:white;
+    background: #805900;
+    color: white;
 }
 
 /* COLLECTOR CARD */
 
 .collector-card {
-    background:white;
-    padding:30px 15px;
-    text-align:center;
-    border-radius:8px;
-    box-shadow:0 3px 20px rgba(0,0,0,0.10);
+    background: white;
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.10);
 }
 
 .collector-card img {
-    width:155px;
-    height:110px;
-    object-fit:cover;
-    margin-bottom:15px;
+    width: 155px;
+    height: 110px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .collector-card h3 {
-    font-size:18px;
-    line-height:1.4;
-    color:#222;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #222;
 }
 
 .collector-card p {
-    margin-top:7px;
-    font-size:16px;
+    margin-top: 7px;
+    font-size: 16px;
 }
 
 .collector-links {
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .collector-links a {
-    text-decoration:none;
-    color:#805900;
-    font-size:13px;
-    margin:5px;
+    text-decoration: none;
+    color: #805900;
+    font-size: 13px;
+    margin: 5px;
 }
 
-/* RIGHT SIDE */
+.collector-links a:hover {
+    text-decoration: underline;
+}
+
+/* RIGHT SECTION */
 
 .right-info h2 {
-    color:#684500;
-    font-size:23px;
-    margin-bottom:16px;
+    color: #684500;
+    font-size: 23px;
+    margin-bottom: 16px;
 }
+
+/* PUBLIC UTILITY AND GLANCE */
 
 .utility-box,
 .glance-box {
-    background:#eeeeee;
-    padding:28px 22px;
-    border-radius:12px;
-    margin-bottom:20px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
+    background: #eeeeee;
+    padding: 28px 22px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
 }
 
 .utility-box div,
 .glance-box div {
-    font-size:15px;
-    line-height:1.5;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .utility-box strong,
 .glance-box strong {
-    color:#111;
+    color: #111;
 }
 
-/* BOTTOM GOLD STRIP */
+/* GOLD BOTTOM DESIGN */
 
 .bottom-strip {
-    height:80px;
-    background:#dfa936;
-    width:100%;
+    height: 80px;
+    background: #dfa936;
+    width: 100%;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE DESIGN */
 
-@media(max-width:900px) {
+@media(max-width: 900px) {
 
     .info-container {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
 }
 
-@media(max-width:600px) {
+@media(max-width: 600px) {
 
     .left-info {
-        grid-template-columns:1fr;
-        padding:30px 20px;
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
     }
 
     .collector-card {
-        max-width:100%;
+        max-width: 100%;
     }
 
     .utility-box,
     .glance-box {
-        padding:20px 15px;
-        gap:15px;
+        padding: 20px 15px;
+        gap: 15px;
     }
 
     .district-info {
-        padding:30px 15px;
+        padding: 30px 15px;
+    }
+
+    .right-info h2 {
+        font-size: 21px;
     }
 
 }
 
 </style>
 
+</head>
+
+<body>
 
 <!-- DISTRICT INFORMATION SECTION -->
 
@@ -177,61 +216,132 @@
 
 <div class="info-container">
 
+    <!-- LEFT SECTION -->
 
-<!-- LEFT SECTION -->
+    <div class="left-info">
 
-<div class="left-info">
+        <!-- ABOUT DISTRICT -->
 
-    <div class="about-district">
+        <div class="about-district">
 
-        <h2>ABOUT DISTRICT</h2>
+            <h2>ABOUT DISTRICT</h2>
 
-        <p>
-        Shahdol is named after the headquarters town
-        Shahdol which is located on the Bilaspur-Katni
-        Section of the South-Eastern Railways.
+            <p>
+                Shahdol is named after the headquarters town
+                Shahdol which is located on the Bilaspur-Katni
+                Section of the South-Eastern Railways.
 
-        The etymology of the name as ascertained from
-        the local residents points to its derivation
-        from the name of the one Shahdolwa Ahir of
-        Sohagpur village.
-        </p>
+                The etymology of the name as ascertained from
+                the local residents points to its derivation
+                from the name of the one Shahdolwa Ahir of
+                Sohagpur village.
+            </p>
 
-        <a href="https://shahdol.nic.in/en/"
-        target="_blank" class="about-btn">
+            <a href="https://shahdol.nic.in/en/"
+               target="_blank"
+               class="about-btn">
 
-            View More About District ❯
+                View More About District ❯
 
-        </a>
+            </a>
+
+        </div>
+
+
+        <!-- COLLECTOR PROFILE -->
+
+        <div class="collector-card">
+
+            <img
+                src="https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/2026/08/17860935247325.jpeg"
+                alt="Collector Shahdol"
+                onerror="this.src='https://via.placeholder.com/155x110?text=Collector'">
+
+            <h3>
+                Collector and District Magistrate
+            </h3>
+
+            <p>
+                Parth Jaiswal (I.A.S)
+            </p>
+
+            <div class="collector-links">
+
+                <a href="https://shahdol.nic.in/en/dm-profile/parth-jaiswal/"
+                   target="_blank">
+                    Profile ❯
+                </a>
+
+                <a href="https://shahdol.nic.in/en/contact-directory/"
+                   target="_blank">
+                    Contact ❯
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <!-- COLLECTOR PROFILE -->
+    <!-- RIGHT SECTION -->
 
-    <div class="collector-card">
+    <div class="right-info">
 
-        <img
-        src="https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/2026/08/17860935247325.jpeg"
-        alt="Collector Shahdol">
+        <!-- PUBLIC UTILITY -->
 
-        <h3>
-        Collector and District Magistrate
-        </h3>
+        <h2>PUBLIC UTILITY</h2>
 
-        <p>Parth Jaiswal (I.A.S)</p>
+        <div class="utility-box">
 
-        <div class="collector-links">
+            <div>
+                Banks<br>
+                <strong>13</strong>
+            </div>
 
-            <a href="https://shahdol.nic.in/en/dm-profile/parth-jaiswal/"
-            target="_blank">
-            Profile ❯
-            </a>
+            <div>
+                Colleges/Universities<br>
+                <strong>1</strong>
+            </div>
 
-            <a href="https://shahdol.nic.in/en/contact-directory/"
-            target="_blank">
-            Contact ❯
-            </a>
+            <div>
+                Electricity<br>
+                <strong>1</strong>
+            </div>
+
+            <div>
+                Hospitals<br>
+                <strong>1</strong>
+            </div>
+
+        </div>
+
+
+        <!-- DISTRICT AT A GLANCE -->
+
+        <h2>DISTRICT AT A GLANCE</h2>
+
+        <div class="glance-box">
+
+            <div>
+                Area:
+                <strong>5,610 Sq. Km.</strong>
+            </div>
+
+            <div>
+                Population:
+                <strong>10,66,063</strong>
+            </div>
+
+            <div>
+                Language:<br>
+                <strong>Hindi, Bagheli, Urdu</strong>
+            </div>
+
+            <div>
+                Villages:<br>
+                <strong>886</strong>
+            </div>
 
         </div>
 
@@ -239,74 +349,13 @@
 
 </div>
 
-
-<!-- RIGHT SECTION -->
-
-<div class="right-info">
-
-
-<!-- PUBLIC UTILITY -->
-
-<h2>PUBLIC UTILITY</h2>
-
-<div class="utility-box">
-
-    <div>
-        Banks<br>
-        <strong>13</strong>
-    </div>
-
-    <div>
-        Colleges/Universities<br>
-        <strong>1</strong>
-    </div>
-
-    <div>
-        Electricity<br>
-        <strong>1</strong>
-    </div>
-
-    <div>
-        Hospitals<br>
-        <strong>1</strong>
-    </div>
-
-</div>
-
-
-<!-- DISTRICT AT A GLANCE -->
-
-<h2>DISTRICT AT A GLANCE</h2>
-
-<div class="glance-box">
-
-    <div>
-        Area: <strong>5,610 Sq. Km.</strong>
-    </div>
-
-    <div>
-        Population: <strong>10,66,063</strong>
-    </div>
-
-    <div>
-        Language:<br>
-        <strong>Hindi, Bagheli, Urdu</strong>
-    </div>
-
-    <div>
-        Villages:<br>
-        <strong>886</strong>
-    </div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 
-<!-- GOLD BOTTOM DESIGN -->
+<!-- GOLD BOTTOM STRIP -->
 
 <div class="bottom-strip"></div>
+
+
+</body>
+</html>
