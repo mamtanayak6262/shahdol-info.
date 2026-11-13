@@ -1,7 +1,6 @@
  
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,215 +11,840 @@
 
 /* GENERAL */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-body {
-    background: white;
-    color: #222;
+body{
+    background:white;
+    color:#222;
+}
+
+/* TOP BAR */
+
+.top-bar{
+    background:#f5f5f5;
+    border-bottom:1px solid #ccc;
+    padding:10px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:13px;
+}
+
+.top-bar span{
+    margin-right:15px;
+}
+
+/* HEADER */
+
+.header{
+    padding:20px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-circle{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:#08733c;
+    color:white;
+    border:5px solid #e9b32c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.logo p{
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.search-box{
+    display:flex;
+    border:2px solid #aaa;
+    border-bottom:4px solid #72500a;
+    width:350px;
+    height:45px;
+}
+
+.search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    padding:10px;
+    font-size:15px;
+}
+
+.search-box button{
+    border:none;
+    background:white;
+    padding:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.digital-india{
+    color:#db651c;
+    font-size:21px;
+    font-weight:bold;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:white;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding:0 5%;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav ul li a{
+    display:block;
+    text-decoration:none;
+    color:#111;
+    padding:16px 15px;
+    font-size:14px;
+    font-weight:500;
+}
+
+nav ul li a:hover,
+nav ul li.active a{
+    background:#805900;
+    color:white;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/* HERO SLIDER */
+
+.hero{
+    position:relative;
+    height:450px;
+    overflow:hidden;
+    background:#333;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.85;
+}
+
+.hero-content{
+    position:absolute;
+    bottom:0;
+    left:12%;
+    right:12%;
+    background:rgba(0,0,0,.65);
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.hero-content h1{
+    font-size:28px;
+}
+
+.slider-buttons button{
+    padding:12px 17px;
+    border:none;
+    background:white;
+    cursor:pointer;
+    font-size:20px;
+    margin:2px;
+}
+
+.slider-buttons button:hover{
+    background:#e6aa22;
+}
+
+/* NEWS */
+
+.news{
+    max-width:1100px;
+    margin:30px auto;
+    display:flex;
+    align-items:center;
+    background:#fff0d2;
+    min-height:55px;
+}
+
+.news-title{
+    background:#684500;
+    color:white;
+    padding:17px 30px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.news-text{
+    padding:15px;
+    flex:1;
+    font-size:15px;
+}
+
+/* QUICK LINKS */
+
+.quick-links{
+    max-width:1100px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.quick-card{
+    background:white;
+    min-height:130px;
+    box-shadow:0 2px 12px rgba(0,0,0,.15);
+    border-radius:5px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    transition:.3s;
+    text-decoration:none;
+    color:#111;
+    border-bottom:5px solid #dba62b;
+}
+
+.quick-card:hover{
+    transform:translateY(-8px);
+    background:#fff9e9;
+}
+
+.quick-card .icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.quick-card h3{
+    font-size:17px;
+}
+
+/* ABOUT SECTION */
+
+.about{
+    padding:60px 8%;
+    background:#f6f6f6;
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.about-image,
+.about-content{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.about-content h2{
+    color:#805900;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    font-size:16px;
+    line-height:1.8;
+    text-align:justify;
+}
+
+/* TOURISM */
+
+.tourism{
+    padding:50px 8%;
+    text-align:center;
+}
+
+.tourism h2{
+    font-size:30px;
+    color:#805900;
+    margin-bottom:30px;
+}
+
+.tourism-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.place-card{
+    background:white;
+    box-shadow:0 2px 12px #ddd;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+.place-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.place-card h3{
+    padding:18px;
 }
 
 /* DISTRICT INFORMATION */
 
-.district-info {
-    width: 100%;
-    padding: 60px 5%;
-    background: white;
+.district-info{
+    width:100%;
+    padding:60px 5%;
+    background:white;
 }
 
-.info-container {
-    max-width: 1300px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 35px;
+.info-container{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:35px;
 }
 
-/* LEFT SECTION */
+/* LEFT SIDE */
 
-.left-info {
-    background: #fff0d2;
-    padding: 55px 30px;
-    border-radius: 0 0 15px 0;
-
-    display: grid;
-    grid-template-columns: 1.3fr 0.9fr;
-    align-items: center;
-    gap: 25px;
+.left-info{
+    background:#fff0d2;
+    padding:55px 30px;
+    border-radius:0 0 15px 0;
+    display:grid;
+    grid-template-columns:1.3fr .9fr;
+    align-items:center;
+    gap:25px;
 }
 
-.about-district h2 {
-    color: #684500;
-    font-size: 25px;
-    margin-bottom: 18px;
+.about-district h2{
+    color:#684500;
+    font-size:25px;
+    margin-bottom:18px;
 }
 
-.about-district p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #333;
-    text-align: justify;
+.about-district p{
+    font-size:16px;
+    line-height:1.7;
+    color:#333;
+    text-align:justify;
 }
 
-.about-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: 1px solid #805900;
-    border-radius: 25px;
-    text-decoration: none;
-    color: #805900;
-    font-size: 14px;
-    transition: 0.3s;
+.about-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    border:1px solid #805900;
+    border-radius:25px;
+    text-decoration:none;
+    color:#805900;
+    font-size:14px;
 }
 
-.about-btn:hover {
-    background: #805900;
-    color: white;
+.about-btn:hover{
+    background:#805900;
+    color:white;
 }
 
 /* COLLECTOR CARD */
 
-.collector-card {
-    background: white;
-    padding: 30px 15px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.10);
+.collector-card{
+    background:white;
+    padding:30px 15px;
+    text-align:center;
+    border-radius:8px;
+    box-shadow:0 3px 20px rgba(0,0,0,.10);
 }
 
-.collector-card img {
-    width: 155px;
-    height: 110px;
-    object-fit: cover;
-    margin-bottom: 15px;
+.collector-card img{
+    width:155px;
+    height:110px;
+    object-fit:cover;
+    margin-bottom:15px;
 }
 
-.collector-card h3 {
-    font-size: 18px;
-    line-height: 1.4;
-    color: #222;
+.collector-card h3{
+    font-size:18px;
+    line-height:1.4;
+    color:#222;
 }
 
-.collector-card p {
-    margin-top: 7px;
-    font-size: 16px;
+.collector-card p{
+    margin-top:7px;
+    font-size:16px;
 }
 
-.collector-links {
-    margin-top: 20px;
+.collector-links{
+    margin-top:20px;
 }
 
-.collector-links a {
-    text-decoration: none;
-    color: #805900;
-    font-size: 13px;
-    margin: 5px;
+.collector-links a{
+    text-decoration:none;
+    color:#805900;
+    font-size:13px;
+    margin:5px;
 }
 
-.collector-links a:hover {
-    text-decoration: underline;
+/* RIGHT SIDE */
+
+.right-info h2{
+    color:#684500;
+    font-size:23px;
+    margin-bottom:16px;
 }
-
-/* RIGHT SECTION */
-
-.right-info h2 {
-    color: #684500;
-    font-size: 23px;
-    margin-bottom: 16px;
-}
-
-/* PUBLIC UTILITY AND GLANCE */
 
 .utility-box,
-.glance-box {
-    background: #eeeeee;
-    padding: 28px 22px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+.glance-box{
+    background:#eee;
+    padding:28px 22px;
+    border-radius:12px;
+    margin-bottom:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
 }
 
 .utility-box div,
-.glance-box div {
-    font-size: 15px;
-    line-height: 1.5;
+.glance-box div{
+    font-size:15px;
+    line-height:1.5;
 }
 
 .utility-box strong,
-.glance-box strong {
-    color: #111;
+.glance-box strong{
+    color:#111;
 }
 
-/* GOLD BOTTOM DESIGN */
+/* BOTTOM STRIP */
 
-.bottom-strip {
-    height: 80px;
-    background: #dfa936;
-    width: 100%;
+.bottom-strip{
+    height:80px;
+    background:#dfa936;
+    width:100%;
+}
+
+/* FOOTER */
+
+footer{
+    background:#282828;
+    color:white;
+    padding:40px 8%;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+footer h3{
+    color:#eab12c;
+    margin-bottom:18px;
+}
+
+footer p{
+    line-height:2;
+    font-size:14px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#eab12c;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid #666;
+    padding-top:20px;
+    margin-top:30px;
+}
+
+/* BACK TO TOP */
+
+.top-btn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#986900;
+    color:white;
+    font-size:23px;
+    cursor:pointer;
 }
 
 /* RESPONSIVE DESIGN */
 
-@media(max-width: 900px) {
+@media(max-width:900px){
 
-    .info-container {
-        grid-template-columns: 1fr;
+    .header{
+        flex-wrap:wrap;
+    }
+
+    .quick-links{
+        grid-template-columns:repeat(2,1fr);
+        margin:30px 15px;
+    }
+
+    .tourism-cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about{
+        flex-direction:column;
+    }
+
+    .info-container{
+        grid-template-columns:1fr;
+    }
+
+    .search-box{
+        width:100%;
     }
 
 }
 
-@media(max-width: 600px) {
+@media(max-width:600px){
 
-    .left-info {
-        grid-template-columns: 1fr;
-        padding: 30px 20px;
+    .top-bar{
+        flex-direction:column;
+        gap:8px;
     }
 
-    .collector-card {
-        max-width: 100%;
+    .logo h2{
+        font-size:18px;
+    }
+
+    .logo-circle{
+        width:55px;
+        height:55px;
+        font-size:20px;
+    }
+
+    .digital-india{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+        margin:10px 0;
+    }
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    nav ul.show{
+        display:flex;
+    }
+
+    nav ul li a{
+        border-bottom:1px solid #eee;
+    }
+
+    .hero{
+        height:300px;
+    }
+
+    .hero-content{
+        left:0;
+        right:0;
+        padding:12px;
+    }
+
+    .hero-content h1{
+        font-size:19px;
+    }
+
+    .news{
+        margin:20px 10px;
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .news-title{
+        text-align:center;
+    }
+
+    .quick-links{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .quick-card{
+        min-height:120px;
+    }
+
+    .tourism-cards{
+        grid-template-columns:1fr;
+    }
+
+    .left-info{
+        grid-template-columns:1fr;
+        padding:30px 20px;
+    }
+
+    .collector-card{
+        max-width:100%;
     }
 
     .utility-box,
-    .glance-box {
-        padding: 20px 15px;
-        gap: 15px;
+    .glance-box{
+        padding:20px 15px;
+        gap:15px;
     }
 
-    .district-info {
-        padding: 30px 15px;
+    .district-info{
+        padding:30px 15px;
     }
 
-    .right-info h2 {
-        font-size: 21px;
+    .footer-content{
+        grid-template-columns:1fr;
     }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- TOP BAR -->
+
+<div class="top-bar">
+    <div>
+        <span>🇮🇳</span>
+        <span>मध्यप्रदेश शासन</span>
+        <span>Government of Madhya Pradesh</span>
+    </div>
+
+    <div>
+        <span>🔤</span>
+        <span>♿ Accessibility</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logo-circle">श</div>
+
+        <div>
+            <p>जिला शहडोल</p>
+            <h2>District Shahdol</h2>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput"
+        placeholder="Search website...">
+        <button onclick="searchWebsite()">🔍</button>
+    </div>
+
+    <div class="digital-india">
+        🇮🇳 Digital India
+    </div>
+
+</header>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul id="navMenu">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#about">About District</a></li>
+        <li><a href="#directory">Directory</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#tourism">Tourism</a></li>
+        <li><a href="#district-information">District Information</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SLIDER -->
+
+<section class="hero">
+
+    <img id="heroImage"
+    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+    alt="District Shahdol">
+
+    <div class="hero-content">
+        <h1 id="heroTitle">Welcome to District Shahdol</h1>
+
+        <div class="slider-buttons">
+            <button onclick="previousSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+
+</section>
+
+<!-- LATEST NEWS -->
+
+<section class="news">
+    <div class="news-title">Latest News</div>
+
+    <div class="news-text">
+        Welcome to the District Shahdol website demo.
+    </div>
+</section>
+
+<!-- QUICK LINKS -->
+
+<section class="quick-links" id="directory">
+
+    <a href="#departments" class="quick-card">
+        <div class="icon">🏢</div>
+        <h3>E-Office</h3>
+    </a>
+
+    <a href="#contact" class="quick-card">
+        <div class="icon">📞</div>
+        <h3>Telephone Directory</h3>
+    </a>
+
+    <a href="#tourism" class="quick-card">
+        <div class="icon">🏞️</div>
+        <h3>Tourist Places</h3>
+    </a>
+
+    <a href="#district-information" class="quick-card">
+        <div class="icon">👨‍💼</div>
+        <h3>District Administration</h3>
+    </a>
+
+    <a href="#district-information" class="quick-card">
+        <div class="icon">📄</div>
+        <h3>Important Documents</h3>
+    </a>
+
+</section>
+
+<!-- ABOUT SHAHdol -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+        <img
+        src="https://images.unsplash.com/photo-1518005020951-eccb494ad742"
+        alt="Shahdol District">
+    </div>
+
+    <div class="about-content">
+        <h2>About District Shahdol</h2>
+
+        <p>
+            Shahdol is an important district of Madhya Pradesh,
+            India. The district is known for its natural beauty,
+            forests, cultural heritage and historical importance.
+
+            The District Administration works to provide
+            better facilities and government services to
+            citizens.
+
+            This website provides information about district
+            administration, departments, tourism, public services
+            and important documents.
+        </p>
+    </div>
+
+</section>
+
+<!-- TOURISM -->
+
+<section class="tourism" id="tourism">
+
+    <h2>Explore Shahdol</h2>
+
+    <div class="tourism-cards">
+
+        <div class="place-card">
+            <img
+            src="https://images.unsplash.com/photo-1511497584788-876760111969"
+            alt="Forest">
+            <h3>Natural Beauty</h3>
+        </div>
+
+        <div class="place-card">
+            <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+            alt="Nature">
+            <h3>Tourist Attractions</h3>
+        </div>
+
+        <div class="place-card">
+            <img
+            src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23"
+            alt="Heritage">
+            <h3>Culture and Heritage</h3>
+        </div>
+
+    </div>
+
+</section>
+
 <!-- DISTRICT INFORMATION SECTION -->
 
-<section class="district-info">
+<section class="district-info" id="district-information">
 
 <div class="info-container">
 
     <!-- LEFT SECTION -->
 
     <div class="left-info">
-
-        <!-- ABOUT DISTRICT -->
 
         <div class="about-district">
 
@@ -232,14 +856,13 @@ body {
                 Section of the South-Eastern Railways.
 
                 The etymology of the name as ascertained from
-                the local residents points to its derivation
-                from the name of the one Shahdolwa Ahir of
-                Sohagpur village.
+                local residents points to its derivation from
+                the name of Shahdolwa Ahir of Sohagpur village.
             </p>
 
             <a href="https://shahdol.nic.in/en/"
-               target="_blank"
-               class="about-btn">
+            target="_blank" rel="noopener"
+            class="about-btn">
 
                 View More About District ❯
 
@@ -247,33 +870,29 @@ body {
 
         </div>
 
-
         <!-- COLLECTOR PROFILE -->
 
         <div class="collector-card">
 
             <img
-                src="https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/2026/08/17860935247325.jpeg"
-                alt="Collector Shahdol"
-                onerror="this.src='https://via.placeholder.com/155x110?text=Collector'">
+            src="https://cdn.s3waas.gov.in/s354229abfcfa5649e7003b83dd4755294/uploads/2026/08/17860935247325.jpeg"
+            alt="Collector Shahdol">
 
             <h3>
                 Collector and District Magistrate
             </h3>
 
-            <p>
-                Parth Jaiswal (I.A.S)
-            </p>
+            <p>Parth Jaiswal (I.A.S)</p>
 
             <div class="collector-links">
 
                 <a href="https://shahdol.nic.in/en/dm-profile/parth-jaiswal/"
-                   target="_blank">
+                target="_blank" rel="noopener">
                     Profile ❯
                 </a>
 
                 <a href="https://shahdol.nic.in/en/contact-directory/"
-                   target="_blank">
+                target="_blank" rel="noopener">
                     Contact ❯
                 </a>
 
@@ -283,12 +902,9 @@ body {
 
     </div>
 
-
     <!-- RIGHT SECTION -->
 
     <div class="right-info">
-
-        <!-- PUBLIC UTILITY -->
 
         <h2>PUBLIC UTILITY</h2>
 
@@ -316,21 +932,16 @@ body {
 
         </div>
 
-
-        <!-- DISTRICT AT A GLANCE -->
-
         <h2>DISTRICT AT A GLANCE</h2>
 
         <div class="glance-box">
 
             <div>
-                Area:
-                <strong>5,610 Sq. Km.</strong>
+                Area: <strong>5,610 Sq. Km.</strong>
             </div>
 
             <div>
-                Population:
-                <strong>10,66,063</strong>
+                Population: <strong>10,66,063</strong>
             </div>
 
             <div>
@@ -351,11 +962,197 @@ body {
 
 </section>
 
-
-<!-- GOLD BOTTOM STRIP -->
+<!-- GOLD BOTTOM DESIGN -->
 
 <div class="bottom-strip"></div>
 
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <div class="footer-content">
+
+        <div>
+            <h3>District Shahdol</h3>
+
+            <p>
+                District Shahdol<br>
+                Madhya Pradesh, India<br>
+                Welcome to Shahdol District Website
+            </p>
+        </div>
+
+        <div id="departments">
+            <h3>Important Links</h3>
+
+            <p>
+                <a href="#about">About District</a><br>
+                <a href="#tourism">Tourism</a><br>
+                <a href="#directory">Directory</a><br>
+                <a href="#district-information">District Information</a>
+            </p>
+        </div>
+
+        <div>
+            <h3>Contact Information</h3>
+
+            <p>
+                District Collector Office<br>
+                Shahdol, Madhya Pradesh<br>
+                India
+            </p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © 2026 District Shahdol Website Demo.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            This is an educational demo project,
+            not an official government website.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- BACK TO TOP -->
+
+<button class="top-btn" onclick="goToTop()">↑</button>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document.getElementById("navMenu")
+    .classList.toggle("show");
+
+}
+
+/* SLIDER */
+
+let slides = [
+
+    {
+        title:"Welcome to District Shahdol",
+        image:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+    },
+
+    {
+        title:"Explore the Natural Beauty of Shahdol",
+        image:"https://images.unsplash.com/photo-1511497584788-876760111969"
+    },
+
+    {
+        title:"Discover Culture and Heritage",
+        image:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+    }
+
+];
+
+let currentSlide = 0;
+
+function showSlide(){
+
+    document.getElementById("heroTitle").innerText =
+    slides[currentSlide].title;
+
+    document.getElementById("heroImage").src =
+    slides[currentSlide].image;
+
+}
+
+function nextSlide(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide();
+
+}
+
+function previousSlide(){
+
+    currentSlide--;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide();
+
+}
+
+/* AUTOMATIC SLIDER */
+
+setInterval(nextSlide,5000);
+
+/* SEARCH */
+
+function searchWebsite(){
+
+    let value = document.getElementById("searchInput")
+    .value.toLowerCase().trim();
+
+    if(value === ""){
+        alert("Please enter something to search!");
+        return;
+    }
+
+    let sections = document.querySelectorAll(
+        ".about, .tourism, .quick-card, .district-info, footer"
+    );
+
+    let found = false;
+
+    sections.forEach(function(section){
+
+        if(section.innerText.toLowerCase().includes(value)){
+
+            if(!found){
+
+                section.scrollIntoView({
+                    behavior:"smooth"
+                });
+
+                found = true;
+
+            }
+
+        }
+
+    });
+
+    if(!found){
+        alert("No matching information found.");
+    }
+
+}
+
+/* BACK TO TOP */
+
+function goToTop(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
 
 </body>
 </html>
